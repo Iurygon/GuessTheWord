@@ -1,9 +1,15 @@
-aDictPalavras   = {
-    'Frutas': ['Laranja', 'Maçã', 'Abacate', 'Abacaxi', 'Banana', 'Tomate'],
-    'Pais': ['Brasil', 'Canada', 'Estados Unidos', 'Portugal', 'Japão'],
-    'Objeto': ['Colher', 'Ventilador', 'Televisão', 'Celular', 'Rádio', 'Computador']
-}
+aObjeto         = ['Colher', 'Ventilador', 'Televisão', 'Celular', 'Rádio', 'Computador']
+aPais           = ['Brasil', 'Canada', 'Estados Unidos', 'Portugal', 'Japão']
+aFrutas         = ['Laranja', 'Maçã', 'Abacate', 'Abacaxi', 'Banana', 'Tomate']
+aTemas          = ['Objeto', 'Pais', 'Frutas']
+
+cTemaEscolhido  = input('Selecione um tema de palavra: [0] Objetos [1] Países [2] Frutas')
 cPalavra        = ''
 cLetra          = ''
 
-print(aDictPalavras['Frutas'])
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
+
+def palavraAleatoria(tema):
+    
+    return
+
