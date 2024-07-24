@@ -1,3 +1,5 @@
+from random import randrange
+
 aObjeto         = ['Colher', 'Ventilador', 'Televisão', 'Celular', 'Rádio', 'Computador']
 aPais           = ['Brasil', 'Canada', 'Estados Unidos', 'Portugal', 'Japão']
 aFrutas         = ['Laranja', 'Maçã', 'Abacate', 'Abacaxi', 'Banana', 'Tomate']
@@ -10,6 +12,8 @@ cLetra          = ''
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 def palavraAleatoria(tema):
-    
-    return
+    cPalavra = tema[randrange(0, len(tema), 1)]
+    return cPalavra
+
+print(cPalavra)
 
