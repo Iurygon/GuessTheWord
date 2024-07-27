@@ -19,9 +19,13 @@ def palavraAleatoria(tema):
     return cPalavra
 
 def encontraLetra(letraEscolhida, palavra):
+    cResultado = []
     for letra in palavra:
-        if letraEscolhida == palavra[letra]:   
-            
+        if letraEscolhida == letra:   
+            cResultado.append(letra)
+        else:
+            cResultado.append('_')
+    return cResultado
 
 def jogoDaForca():
     match cTemaEscolhido:
@@ -29,5 +33,8 @@ def jogoDaForca():
         case '1': cPalavra = palavraAleatoria(aPais)
         case '2': cPalavra = palavraAleatoria(aFrutas)
     print(f'Sua palavra tem {len(cPalavra)} caracteres.')
-    cLetra = input('Qual letra você gostaria de tentar primeiro?')
+    cLetra = input('Advinhe uma letra:')
+    cResultado = encontraLetra(cLetra, cPalavra)
+    print(cResultado)
 
+jogoDaForca()
