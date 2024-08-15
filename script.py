@@ -29,23 +29,18 @@ def escolheTema():
         print(f'Sua palavra tem {len(cPalavra)} caracteres.')
     except:
         print('O valor digitado deve estar entre as opções disponíveis')
+        escolheTema()
     return cPalavra
 
 def jogoDaForca():
-    # try:
-    #     cTemaEscolhido  = int(input('Selecione um tema de palavra: [0] Objetos [1] Países [2] Frutas: '))
-    #     match cTemaEscolhido:
-    #         case 0: cPalavra = palavraAleatoria(aObjeto)
-    #         case 1: cPalavra = palavraAleatoria(aPais)
-    #         case 2: cPalavra = palavraAleatoria(aFrutas)
-    #     print(f'Sua palavra tem {len(cPalavra)} caracteres.')
-        
+    cPalavra = escolheTema()    
     cResultado = []
     nPontuacao = 5
     for i in cPalavra:
         cResultado.append('_')
 
     for i in range(0, 5):
+        os.system('clear')
         print(f'Restam {5 - i} tentivas.')
         cLetra = input('Advinhe uma letra:')
         cResultado = encontraLetra(cLetra, cPalavra, cResultado)
@@ -60,16 +55,9 @@ def jogoDaForca():
         print(f'Parabéns! Você acertou e ganhou {nPontuacao} pontos!!')
     else:
         print(f'Que pena, você não acertou! A palavra correta era {cPalavra}')
-    # except:
-    #     print('O valor digitado deve estar entre as opções disponíveis.')
-    #     jogoDaForca()
+
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 print('Bem vindo ao jogo da forca! Você terá cinco tentativas de advinhar a palavra escolhida.')
 sleep(1.5)
-# try:
-#     jogoDaForca()
-# except:
-#     print('O valor digitado deve estar entre as opções disponíveis.')
-    
 jogoDaForca()
